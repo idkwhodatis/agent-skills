@@ -1,0 +1,7 @@
+{
+  "required": true,
+  "package": "io.github.idkwhodatis.visibletradershotfix.mixin",
+  "compatibilityLevel": "JAVA_21",
+  "mixins": ["LockedTradeDataMixin"],
+  "injectors": {"defaultRequire": 1}
+}
