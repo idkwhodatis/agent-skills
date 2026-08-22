@@ -1,0 +1,16 @@
+{
+  "schemaVersion": 1,
+  "id": "visibletraders_cartographer_hotfix",
+  "version": "${version}",
+  "name": "Visible Traders Cartographer Hotfix",
+  "description": "Prevents unresolved Visible Traders future map offers from leaking into vanilla villager offers on Minecraft 1.21.1.",
+  "authors": ["idkwhodatis"],
+  "license": "MIT",
+  "environment": "*",
+  "mixins": ["visibletraders_hotfix.mixins.json"],
+  "depends": {
+    "fabricloader": ">=0.16.0",
+    "minecraft": "1.21.1",
+    "visibletraders": "1.3.2"
+  }
+}
