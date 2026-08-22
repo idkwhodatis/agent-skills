@@ -1,0 +1,30 @@
+plugins {
+    id 'fabric-loom' version '1.7-SNAPSHOT'
+}
+
+group = 'io.github.idkwhodatis'
+version = '1.0.0'
+base { archivesName = 'visibletraders-1.3.2-cartographer-hotfix' }
+
+repositories {
+    maven { url = 'https://maven.fabricmc.net/' }
+    maven { url = 'https://api.modrinth.com/maven' }
+    mavenCentral()
+}
+
+dependencies {
+    minecraft 'com.mojang:minecraft:1.21.1'
+    mappings 'net.fabricmc:yarn:1.21.1+build.3:v2'
+    modImplementation 'net.fabricmc:fabric-loader:0.16.2'
+    modImplementation 'net.fabricmc.fabric-api:fabric-api:0.102.1+1.21.1'
+    modCompileOnly 'maven.modrinth:AhllI99f:nEDGMR8b'
+}
+
+java {
+    toolchain.languageVersion = JavaLanguageVersion.of(21)
+}
+
+processResources {
+    inputs.property 'version', project.version
+    filesMatching('fabric.mod.json') { expand version: project.version }
+}
